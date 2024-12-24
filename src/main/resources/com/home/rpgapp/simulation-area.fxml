@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.home.rpgapp.controller.SimulationController">
+
+    <HBox alignment="CENTER" layoutX="40.0" layoutY="40.0" prefHeight="350.0" prefWidth="800.0" spacing="20">
+        <!-- Left Panel for Character 1's Stats -->
+        <VBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10">
+            <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Character 1 Stats" />
+            <Label fx:id="char1NameLabel" text="Name: " />
+            <Label fx:id="char1ClassLabel" text="Class: " />
+            <Label fx:id="char1LevelLabel" text="Level: " />
+            <Label fx:id="char1HpLabel" text="HP: " />
+            <Label fx:id="char1XpLabel" text="XP: " />
+            <Label fx:id="char1GoldLabel" text="Gold: " />
+        </VBox>
+
+        <!-- Center Panel for Simulation Controls -->
+        <VBox alignment="CENTER" spacing="10">
+            <HBox spacing="10">
+                <Label text="Select Character 1:" />
+                <ComboBox fx:id="character1ComboBox" onAction="#displayChar1Stats" prefWidth="200.0" promptText="Character 1" />
+            </HBox>
+            <HBox spacing="10">
+                <Label text="Select Character 2:" />
+                <ComboBox fx:id="character2ComboBox" onAction="#displayChar2Stats" prefWidth="200.0" promptText="Character 2" />
+            </HBox>
+            <Button fx:id="startSimulationButton" onAction="#startSimulation" text="Start Simulation" />
+            <TextArea fx:id="simulationLog" editable="false" prefHeight="200.0" prefWidth="400.0" wrapText="true" />
+            <Label fx:id="winnerLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Winner will be displayed here" />
+        </VBox>
+
+        <!-- Right Panel for Character 2's Stats -->
+        <VBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10">
+            <Label style="-fx-font-size: 14px; -fx-font-weight: bold;" text="Character 2 Stats" />
+            <Label fx:id="char2NameLabel" text="Name: " />
+            <Label fx:id="char2ClassLabel" text="Class: " />
+            <Label fx:id="char2LevelLabel" text="Level: " />
+            <Label fx:id="char2HpLabel" text="HP: " />
+            <Label fx:id="char2XpLabel" text="XP: " />
+            <Label fx:id="char2GoldLabel" text="Gold: " />
+        </VBox>
+    </HBox>
+    <Button fx:id="backToMainButton" layoutX="250.0" layoutY="445.0" onAction="#handleBackToMainMenu" prefHeight="30.0" prefWidth="120.0" text="Back to Main Menu" />
+</AnchorPane>

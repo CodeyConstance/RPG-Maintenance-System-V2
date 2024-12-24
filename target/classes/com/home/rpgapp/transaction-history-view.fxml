@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.home.rpgapp.controller.TransactionHistoryController">
+
+    <TableView fx:id="tblTransactions" layoutX="60.0" layoutY="40.0" prefHeight="400.0" prefWidth="794.0">
+        <columns>
+            <TableColumn fx:id="colTransactionID" prefWidth="129.0" text="Transaction ID" />
+            <TableColumn fx:id="colCharacterID" prefWidth="89.0" text="Character ID" />
+            <TableColumn fx:id="colCharacterName" prefWidth="108.0" text="Character Name" />
+            <TableColumn fx:id="colItemName" prefWidth="98.0" text="Item Name" />
+            <TableColumn fx:id="colQuantity" prefWidth="73.0" text="Quantity" />
+            <TableColumn fx:id="colTotalCost" prefWidth="63.0" text="Total" />
+            <TableColumn fx:id="colTransactionType" prefWidth="81.0" text="Type" />
+            <TableColumn fx:id="colTransactionDate" prefWidth="152.0" text="Date" />
+        </columns>
+    </TableView>
+
+    <Button fx:id="backToMainButton" layoutX="60.0" layoutY="445.0" onAction="#handleBackToMainMenu" prefHeight="30.0" prefWidth="120.0" text="Back to Main Menu" />
+
+</AnchorPane>
